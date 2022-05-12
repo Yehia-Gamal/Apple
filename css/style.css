@@ -1,0 +1,249 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #000;
+  color: #fff;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.container {
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Start burger Menu */
+#menu {
+  display: none;
+  position: relative;
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  user-select: none;
+}
+#menu span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 6px;
+  transform-origin: 0 0;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+#menu.is-active span:nth-child(1) {
+  transform: translate(0px, -2px) rotate(45deg);
+}
+#menu.is-active span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(15px);
+}
+#menu.is-active span:nth-child(3) {
+  transform: translate(-3px, 3px) rotate(-45deg);
+}
+#menu.is-active span {
+  background-color: #ff274b;
+}
+/* End burger Menu */
+
+/* Start Navbar */
+nav {
+  height: 80px;
+  padding: 10px 0;
+}
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .container a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+}
+nav .container a img {
+  width: 50px;
+  height: 50px;
+}
+nav .container ul {
+  list-style: none;
+  display: flex;
+}
+nav .container ul li {
+  padding: 10px;
+  margin: 0 5px;
+  border: 1px solid transparent;
+  transition: 0.5s;
+}
+nav .container ul li:hover {
+  background-color: #000;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  opacity: 0.8;
+}
+/* End Navbar */
+
+/* Start Header */
+header {
+  position: relative;
+  padding-top: 50px;
+  height: calc(100vh - 100px);
+}
+header .container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+}
+header .container .img {
+  width: 30%;
+}
+header .container .img img {
+  width: 180px;
+}
+header .container .text {
+  width: 40%;
+}
+header .container .text h2 {
+  text-transform: uppercase;
+  font-size: 40px;
+}
+header .container .text p {
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+header .container .text a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  padding: 10px 15px;
+  background-color: #fff;
+  border-radius: 20px;
+  transition: ease 0.5s;
+}
+header .container .text a:hover {
+  padding: 12px 18px;
+  letter-spacing: 1px;
+  opacity: 0.8;
+}
+/* End Header */
+
+/* start icons */
+.icons {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+}
+.icons .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+}
+.icons .container .img-icon img {
+  width: 40px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.icons .container .img-icon img:hover {
+  transform: scale(1.2);
+  border: 1px solid #fff;
+  border-radius: 6px;
+}
+/* End icons */
+
+/* Start Media Queries */
+@media (max-width: 767px) {
+  #menu {
+    display: block;
+  }
+  nav .container ul {
+    display: none;
+  }
+  nav ul {
+    display: none;
+    position: fixed;
+    top: 50px;
+    right: 10px;
+    width: 50vw;
+    height: 200px;
+    border-radius: 10px;
+    padding: 0;
+    background-color: #22282a;
+  }
+  nav ul.is-active {
+    display: block;
+    z-index: 100;
+  }
+  nav ul li {
+    text-align: center;
+  }
+  header {
+    padding-top: 0;
+  }
+  header .container {
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+  header .container .text {
+    width: 100%;
+    padding-bottom: 40px;
+  }
+  header .container .text h2 {
+    font-size: 30px;
+  }
+  header .container .text p {
+    font-size: 16px;
+    width: 90%;
+  }
+  header .container .img {
+    width: 100%;
+  }
+  header .container .img img {
+    display: block;
+    width: 100px;
+    margin: auto;
+  }
+  .icons .container .img-icon img {
+    width: 30px;
+  }
+  header .container .text a {
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 15px;
+  }
+  header .container .text a:hover {
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  header .container .img img {
+    width: 130px;
+  }
+}
+@media (max-width: 500px) {
+  header .container .img img {
+    width: 120px;
+  }
+}
+@media (max-width: 400px) {
+  header .container .img img {
+    width: 100px;
+  }
+}
+/* End Media Queries */
