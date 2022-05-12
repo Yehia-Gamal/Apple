@@ -98,7 +98,7 @@ nav .container ul li:hover {
 header {
   position: relative;
   padding-top: 50px;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 80px);
 }
 header .container {
   display: flex;
@@ -193,6 +193,8 @@ header .container .text a:hover {
   }
   header {
     padding-top: 0;
+    height: calc(100vh - 150px);
+
   }
   header .container {
     flex-direction: column-reverse;
